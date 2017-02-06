@@ -1,0 +1,106 @@
+name = "IGN/Sigpac";
+tileType = "jpg";
+tileSize = 256;
+minZoom = 5;
+maxZoom = 19;
+tileUpdate = TileUpdate.IfModifiedSince;
+backgroundColor = "#000000";
+ignoreError = "False";
+
+
+String getTileUrl( int zoom, int x, int y ) {
+if (zoom == 5) {
+x = x - 14;
+y = y - 11;
+return "http://www.ign.es/wmts/ot/MGUIA/Default/MGUIA@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+}
+if (zoom == 6) {
+x = x - 28;
+y = y - 23;
+return "http://www.ign.es/wmts/ot/MGUIA/Default/MGUIA@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+
+}
+if (zoom == 7) {
+x = x - 57;
+y = y - 46;
+return "http://www.ign.es/wmts/ot/MGUIA/Default/MGUIA@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+
+}
+if (zoom == 8) {
+x = x - 114;
+y = y - 93;
+return "http://www.ign.es/wmts/ot/MTN1000IGN/Default/MTN1000IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 9) {
+x = x - 228;
+y = y - 186;
+return "http://www.ign.es/wmts/ot/MTN1000IGN/Default/MTN1000IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 10) {
+x = x - 457;
+y = y - 372;
+return "http://www.ign.es/wmts/ot/MTN1000IGN/Default/MTN1000IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 11) {
+x = x - 915;
+y = y - 744;
+return "http://www.ign.es/wmts/ot/MTN200IGN/Default/MTN200IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 12) {
+x = x - 1831;
+y = y - 1489;
+return "http://www.ign.es/wmts/ot/MTN200IGN/Default/MTN200IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 13) {
+x = x - 3663;
+y = y - 2978;
+return "http://www.ign.es/wmts/ot/MTN50IGN/Default/MTN50IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+
+}
+if (zoom == 14) {
+x = x - 7327;
+y = y - 5957;
+return "http://www.ign.es/wmts/ot/MTN50IGN/Default/MTN50IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 15) {
+x = x - 14654;
+y = y - 11915;
+return "http://www.ign.es/wmts/ot/MTN25IGN/Default/MTN25IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 16) {
+x = x - 29309;
+y = y - 23830;
+return "http://www.ign.es/wmts/ot/MTN25IGN/Default/MTN25IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 16) {
+y = 65535 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 17) {
+y = 131071 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 18) {
+y = 262143 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 19) {
+y = 524287 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+}

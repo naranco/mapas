@@ -1,0 +1,90 @@
+name = "SIGPAC 50";
+tileType = "jpg";
+tileSize = 256;
+minZoom = 5;
+maxZoom = 19;
+tileUpdate = TileUpdate.IfModifiedSince;
+backgroundColor = "#ffffff";
+ignoreError = "False";
+
+
+String getTileUrl( int zoom, int x, int y ) {
+if (zoom == 5) {
+y = 31 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtnsigpac" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+}
+
+if (zoom == 6) {
+y = 63 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn2000" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 7) {
+y = 127 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn2000" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 8) {
+y = 255 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn2000" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 9) {
+y = 511 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn2000" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 10) {
+y = 1023 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn2000" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 11) {
+y = 2047 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn200" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+
+}
+if (zoom == 12) {
+y = 4095 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn200" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 13) {
+x = x - 3663;
+y = y - 2978;
+return "http://www.ign.es/wmts/ot/MTN50IGN/Default/MTN50IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 14) {
+x = x - 7327;
+y = y - 5957;
+return "http://www.ign.es/wmts/ot/MTN50IGN/Default/MTN50IGN@3785" + "/" + zoom + "/" + y + "/" + x + ".jpg";
+
+}
+if (zoom == 15) {
+y = 32767 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn25" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 16) {
+y = 65535 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/mtn25" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 17) {
+y = 131071 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 18) {
+y = 262143 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+if (zoom == 19) {
+y = 524287 - y;
+return "http://sigpac.mapama.gob.es/sdg/raster/ortofotos" + "@3857" + "/" + zoom + "." + x + "." + y + ".img";
+
+}
+}
